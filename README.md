@@ -6,7 +6,7 @@ A process to periodically send heartbeat to monitoring service
 
 ## Installation
 
-If [available in Hex](hexdocs.pm/push_heartbeat_monitor/), the package can be installed
+If [available in Hex](https://hexdocs.pm/push_heartbeat_monitor/readme.html), the package can be installed
 by adding `push_heartbeat_monitor` to your list of dependencies in `mix.exs`:
 
 ```elixir
