@@ -1,6 +1,10 @@
 # PushHeartbeatMonitor
 
-<img src="https://coveralls.io/repos/github/xshadowlegendx/ex_push_heartbeat_monitor/badge.svg?branch=main"/> <img src="https://github.com/xshadowlegendx/ex_push_heartbeat_monitor/actions/workflows/ci.yml/badge.svg"/>
+<p>
+  <img src="https://coveralls.io/repos/github/xshadowlegendx/ex_push_heartbeat_monitor/badge.svg?branch=main"/>
+  <img src="https://github.com/xshadowlegendx/ex_push_heartbeat_monitor/actions/workflows/ci.yml/badge.svg"/>
+  <img src="https://img.shields.io/hexpm/dt/push_heartbeat_monitor"/>
+</p>
 
 A process to periodically send heartbeat to monitoring service
 
