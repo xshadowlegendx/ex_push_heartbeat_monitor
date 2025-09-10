@@ -69,7 +69,7 @@ defmodule PushHeartbeatMonitor do
         Logger.debug("push heartbeat sent")
 
       {:ok, %Req.Response{status: status, body: resp}} ->
-        Logger.warning("failed to push heartbeat - status:#{status}, resp:#{resp}")
+        Logger.warning("failed to push heartbeat - status:#{status}, resp:#{heartbeat_response_to_string(resp)}")
 
       {:error, exception} ->
         Logger.error("error pushing heartbeat - #{Exception.message(exception)}")
@@ -77,6 +77,12 @@ defmodule PushHeartbeatMonitor do
 
     {:noreply, state}
   end
+
+  defp heartbeat_response_to_string(resp) when is_map(resp) or is_list(resp),
+    do: :json.encode(resp)
+
+  defp heartbeat_response_to_string(resp) when is_binary(resp),
+    do: resp
 
   defp do_push_heartbeat(%{healthcheck_func: {mod, func}} = config) do
     healthcheck = apply(mod, func, [])
