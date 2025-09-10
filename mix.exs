@@ -4,7 +4,7 @@ defmodule PushHeartbeatMonitor.MixProject do
   def project do
     [
       app: :push_heartbeat_monitor,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -56,7 +56,6 @@ defmodule PushHeartbeatMonitor.MixProject do
   defp deps do
     [
       {:req, "~> 0.5.0"},
-
       {:mock, "~> 0.3.0", only: :test},
       {:excoveralls, "~> 0.18", only: :test},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
